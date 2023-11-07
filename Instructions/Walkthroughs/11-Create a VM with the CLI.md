@@ -44,14 +44,13 @@ In this task, we will use Azure CLI to create a resource group and a virtual mac
 
 4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (`\`) character. If you type the whole command on the same line, do not use any backslash characters. 
 
-    ```cli
-    az vm create \
-    --name myVMCLI \
-    --resource-group myRGCLI \
-    --image UbuntuLTS \
-    --location EastUS2 \
-    --admin-username azureuser \
-    --admin-password Pa$$w0rd1234
+    ```az vm create \
+--name server-teste-barrado \
+--resource-group aulacloud \
+--public-ip-sku Standard \
+--image Ubuntu2204 \
+--admin-username azureuser \
+--generate-ssh-keys
     ```
 
     >**Note**: If you are using the command line on a Windows computer, replace the backslash (`\`) character with the caret (`^`) character.
