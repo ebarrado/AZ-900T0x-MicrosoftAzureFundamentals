@@ -45,8 +45,8 @@ In this task, we will use Azure CLI to create a resource group and a virtual mac
 4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (`\`) character. If you type the whole command on the same line, do not use any backslash characters. 
 
     ```az vm create \
-    --name server-teste-barrado \
-    --resource-group aulacloud \
+    --name nomedoservidor \
+    --resource-group nomedogrupo \
     --public-ip-sku Standard \
     --image Ubuntu2204 \
     --admin-username azureuser \
@@ -75,19 +75,19 @@ In this task, we will practice executing CLI commands from the Cloud Shell.
 3. Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status. Notice the PowerState is **running**.
 
     ```cli
-    az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
+    az vm show --resource-group nomodogrupo --name nomedoservidor --show-details --output table 
     ```
 
 4. Stop the virtual machine. Notice the message that billing continues until the virtual machine is deallocated. 
 
     ```cli
-    az vm stop --resource-group myRGCLI --name myVMCLI
+    az vm stop --resource-group nomedogrupo --name nomedoservidor
     ```
 
 5. Verify your virtual machine status. The PowerState should now be **stopped**.
 
     ```cli
-    az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
+    az vm show --resource-group nomedogrupo --name nomedoservidor --show-details --output table 
     ```
 
 # Task 4: Review Azure Advisor Recommendations
